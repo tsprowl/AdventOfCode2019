@@ -1,3 +1,6 @@
+// Solution for Day 3, Part 1 of Advent of Code 2019
+
+
 package day3;
 
 import java.util.ArrayList;
