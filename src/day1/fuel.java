@@ -1,5 +1,6 @@
 // Solution for Day 1, Part 1 of Advent of Code 2019
 
+
 package day1;
 
 import java.util.ArrayList;
