@@ -1,10 +1,11 @@
-// Solution for Day 1, Part 1 of Advent of Code 2019
+// Solution for Day 1, Part 2 of Advent of Code 2019
+
 
 package day1;
 
 import java.util.ArrayList;
 
-public class Fuel {
+public class FuelButHeavier {
 
 	public static void main(String[] args) {
 		ArrayList<Integer> arrlist = new ArrayList<Integer>();
@@ -111,11 +112,15 @@ public class Fuel {
 			arrlist.add(82734);
 			for (int i = 0; i < 100; i++) {
 				int fuelForModel = 0;
-				int result = Math.floorDiv(arrlist.get(i), 3);
-				fuelForModel = result - 2;
-				totalFuel+=fuelForModel;
-				
+				int result = arrlist.get(i);
+				while (Math.floorDiv(result, 3) > 1 ) {
+					result = Math.floorDiv(result, 3);
+					result = result - 2;
+					fuelForModel = result;
+					totalFuel += fuelForModel;
+				}				
 			}
-			System.out.println(totalFuel);	}
+			System.out.println(totalFuel);
+	}
 
 }
